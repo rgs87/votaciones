@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 04-jun-2015 19:06:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJO.Partido" table="partido" catalog="bd_votaciones_spring" optimistic-lock="version">
+        <id name="idPartido" type="java.lang.Integer">
+            <column name="ID_PARTIDO" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="50" />
+        </property>
+        <property name="votos" type="java.lang.Integer">
+            <column name="VOTOS" />
+        </property>
+    </class>
+</hibernate-mapping>

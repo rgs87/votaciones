@@ -1,0 +1,22 @@
+body{
+    width: 450px;
+    text-align: center;
+    margin:auto;
+}
+
+div#titulo{
+    background-color:cadetblue ;
+    height: 50px;
+    font-size: 2em;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+table{
+    margin: auto;
+}
+form{
+    background-color:cadetblue ;
+    padding:10px;
+}
+

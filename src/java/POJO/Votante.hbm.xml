@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 04-jun-2015 19:06:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="POJO.Votante" table="votante" catalog="bd_votaciones_spring" optimistic-lock="version">
+        <id name="idVotante" type="java.lang.Integer">
+            <column name="ID_VOTANTE" />
+            <generator class="identity" />
+        </id>
+        <property name="nif" type="string">
+            <column name="NIF" length="50" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD" length="50" />
+        </property>
+        <property name="votado" type="string">
+            <column name="VOTADO" length="3" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

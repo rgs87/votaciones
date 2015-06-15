@@ -11,6 +11,8 @@
  
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <bean class="BLL.CensoController"  id="censoKey" />
+    <bean class="BLL.VotacionesController" id="votacion"/>
+    
 
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
@@ -22,6 +24,7 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="censo.htm">censoKey</prop>
+                <prop key="*.htm">votacion</prop>
             </props>
         </property>
     </bean>

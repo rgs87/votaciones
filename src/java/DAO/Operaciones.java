@@ -20,11 +20,14 @@ import org.hibernate.Transaction;
  * @author Ruben
  */
 public class Operaciones {
+    
+     
 
     public void insertarVotante(Votante _objVotante, SessionFactory _sessionBuilder) {
         Session session = _sessionBuilder.openSession();//statement
         Transaction tx = null;
         try {
+            _objVotante.setVotado("N");
             tx = session.beginTransaction();
             //HQL
             session.save(_objVotante);

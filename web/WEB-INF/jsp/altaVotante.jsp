@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Votante insertado con éxito</h1>
+        <a href="index.htm">Volver al inicio</a>
     </body>
 </html>

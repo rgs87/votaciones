@@ -64,7 +64,7 @@ public class VotacionesController extends SimpleFormController {
                     setSuccessView("votarPartido");  
                     HttpSession httpsession = request.getSession(true);
                     httpsession.setAttribute("votante", OVotante);
-                    mv = new ModelAndView(getSuccessView());
+                    mv = new ModelAndView("redirect:votarPartido.htm");
                 }
                 else{
                     setSuccessView("noVotar");

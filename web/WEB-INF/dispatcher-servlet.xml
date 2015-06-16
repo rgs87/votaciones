@@ -25,7 +25,7 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="censo.htm">censoKey</prop>
-                <prop key="*.htm">votacion</prop>
+                <prop key="gestionVotaciones.htm">votacion</prop>
                 <prop key="votarPartido.htm">votacionPartido</prop>
             </props>
         </property>

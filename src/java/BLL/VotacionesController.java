@@ -80,7 +80,12 @@ public class VotacionesController extends SimpleFormController {
 //            }
             default:
                 mv = new ModelAndView("altaVotante");
-            //case 1: {persona=buscar(persona);eliminar(persona);accion = "Eliminado";break;}
+            case 1: {
+                operaciones.bajaVotante(OVotante, sessionBuilder);
+                setSuccessView("bajaVotante");
+                mv = new ModelAndView(getSuccessView());
+                break;
+            }
             //case 2: {modificar(persona);accion = "Modificado";break;}
             //case 3: {persona=buscar(persona);accion = "Consultado";break;}
             //case 4: {listado=listar();accion = "Listado";break;}

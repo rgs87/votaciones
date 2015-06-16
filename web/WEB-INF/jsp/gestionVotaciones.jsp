@@ -9,7 +9,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../css/estilos.css" rel="stylesheet"  type="text/css"/>
         <title>Votaciones</title>
     </head>
     <body>
@@ -38,7 +37,7 @@
                 <br><br>
                 <input type="submit" value="Alta Votante"  name="insertar">
                 <input type="button" value="Baja Votante" name="baja" >
-                <input type="button" value="Votar" name="votar">
+                <input type="submit" value="Votar" name="votar">
                 <input type="button" value="Escrutar" name="escrutar">
                 <input type="button"  value="Comprobar Censo" name="censo" onclick="location.href = 'censo.htm'">
             </form>

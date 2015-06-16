@@ -8,10 +8,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
- 
+   
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
     <bean class="BLL.CensoController"  id="censoKey" />
     <bean class="BLL.VotacionesController" id="votacion"/>
+    <bean class="BLL.VotarPartidoController" id="votacionPartido"/>
     
 
     <!--
@@ -25,6 +26,7 @@
                 <prop key="index.htm">indexController</prop>
                 <prop key="censo.htm">censoKey</prop>
                 <prop key="*.htm">votacion</prop>
+                <prop key="votarPartido.htm">votacionPartido</prop>
             </props>
         </property>
     </bean>

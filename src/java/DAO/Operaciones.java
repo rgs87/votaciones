@@ -52,10 +52,11 @@ public class Operaciones {
     public void bajaVotante(Votante _objVotante, SessionFactory _sessionBuilder) {
         Session session = _sessionBuilder.openSession();//statement
         //Buscar el objeto con los parametros introducidos
-        Query q = session.createQuery("FROM Votantes WHERE nif= :_vnif AND password= :_vpassword");
+        Query q = session.createQuery("FROM Votante WHERE nif= :_vnif AND password= :_vpassword");
         q.setParameter("_vnif", _objVotante.getNif());
         q.setParameter("_vpassword", _objVotante.getPassword());
-        List list_Votante = q.list();
+        List list_Votante = new ArrayList();
+        list_Votante = q.list();
         
         //Guardamos en un objeto Votantes el objeto que nos devuelve el list para despues borrarlo de la tabla
         Votante _Votante = new Votante();
@@ -85,7 +86,7 @@ public class Operaciones {
     public boolean puedeVotar(Votante _objVotante, SessionFactory _sessionBuilder){
         Session session = _sessionBuilder.openSession();//statement
         //Buscar el objeto con los parametros introducidos
-        Query q = session.createQuery("FROM Votantes WHERE nif= :_vnif AND password= :_vpassword AND votado='N'" );
+        Query q = session.createQuery("FROM Votante WHERE nif= :_vnif AND password= :_vpassword AND votado='N'" );
         q.setParameter("_vnif", _objVotante.getNif());
         q.setParameter("_vpassword", _objVotante.getPassword());
         List list_Votante = q.list();
@@ -100,7 +101,7 @@ public class Operaciones {
     public void grabarVoto(Votante _objVotante, Partido _objPartido,SessionFactory _sessionBuilder){
         Session session = _sessionBuilder.openSession();//statement
         //Buscar al votante
-        Query q = session.createQuery("FROM Votantes WHERE nif= :_vnif AND password= :_vpassword");
+        Query q = session.createQuery("FROM Votante WHERE nif= :_vnif AND password= :_vpassword");
         q.setParameter("_vnif", _objVotante.getNif());
         q.setParameter("_vpassword", _objVotante.getPassword());
         List list_Votante = q.list();

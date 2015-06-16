@@ -37,7 +37,7 @@
                 </table>
                 <br><br>
                 <input type="submit" value="Alta Votante"  name="insertar">
-                <input type="button" value="Baja Votante" name="baja" >
+                <input type="submit" value="Baja Votante" name="baja" >
                 <input type="button" value="Votar" name="votar">
                 <input type="button" value="Escrutar" name="escrutar">
                 <input type="button"  value="Comprobar Censo" name="censo" onclick="location.href = 'censo.htm'">

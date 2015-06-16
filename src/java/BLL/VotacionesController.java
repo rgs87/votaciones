@@ -57,7 +57,12 @@ public class VotacionesController extends SimpleFormController {
             }
             default:
                 mv = new ModelAndView("altaVotante");
-            //case 1: {persona=buscar(persona);eliminar(persona);accion = "Eliminado";break;}
+            case 1: {
+                operaciones.bajaVotante(OVotante, sessionBuilder);
+                setSuccessView("bajaVotante");
+                mv = new ModelAndView(getSuccessView());
+                break;
+            }
             //case 2: {modificar(persona);accion = "Modificado";break;}
             //case 3: {persona=buscar(persona);accion = "Consultado";break;}
             //case 4: {listado=listar();accion = "Listado";break;}
@@ -69,7 +74,7 @@ public class VotacionesController extends SimpleFormController {
     private int verificaAccion(HttpServletRequest request) {
         if (request.getParameter("insertar")!=null) {
             return 0;
-        } else if ("baja".equals(request.getParameter("baja"))) {
+        } else if (request.getParameter("baja")!=null) {
             return 1;
         } else if ("votar".equals(request.getParameter("votar"))) {
             return 2;

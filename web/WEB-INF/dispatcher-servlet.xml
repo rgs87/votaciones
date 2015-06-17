@@ -18,6 +18,7 @@
     <bean class="BLL.CensoController"  id="censoKey" />
     <bean class="BLL.VotacionesController" id="votacion"/>
     <bean class="BLL.VotarPartidoController" id="votacionPartido"/>
+    <bean class="BLL.EscrutinioController"  id="escrutinioKey" />
     
 
     <!--
@@ -30,6 +31,7 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="censo.htm">censoKey</prop>
+                <prop key="escrutinio.htm">escrutinioKey</prop>
                 <prop key="gestionVotaciones.htm">votacion</prop>
                 <prop key="votarPartido.htm">votacionPartido</prop>
             </props>

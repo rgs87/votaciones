@@ -74,6 +74,7 @@ public class VotacionesController extends SimpleFormController {
                 mv = new ModelAndView(getSuccessView());
                 break;
             }
+            
             default:
                 mv = new ModelAndView("redirect:index.htm");
         }

@@ -39,7 +39,7 @@
                 <input type="submit" value="Alta Votante"  name="insertar">
                 <input type="submit" value="Baja Votante" name="baja" >
                 <input type="submit" value="Votar" name="votar">
-                <input type="button" value="Escrutar" name="escrutar">
+                <input type="button" value="Escrutar" name="escrutar" onclick="location.href = 'escrutinio.htm'">
                 <input type="button"  value="Comprobar Censo" name="censo" onclick="location.href = 'censo.htm'">
             </form>
         </spring:nestedPath>

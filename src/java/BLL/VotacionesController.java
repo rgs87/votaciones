@@ -42,7 +42,6 @@ public class VotacionesController extends SimpleFormController {
     protected ModelAndView onSubmit(HttpServletRequest request, HttpServletResponse response, Object command, BindException errors) throws Exception {
         Votante OVotante = (Votante) command;
         ModelAndView mv;
-        String accion = "No seleccionada ";
         int opcionSeleccionada = verificaAccion(request);
 //        try {
         sessionBuilder = NewHibernateUtil.getSessionFactory();//Conexion
@@ -55,10 +54,6 @@ public class VotacionesController extends SimpleFormController {
                 mv = new ModelAndView(getSuccessView());
                 break;
             }
-
-//            case 1: {
-//                break;
-//            }
             case 2: {
                 if (operaciones.puedeVotar(OVotante, sessionBuilder)) {
                     setSuccessView("votarPartido");  
@@ -72,23 +67,15 @@ public class VotacionesController extends SimpleFormController {
                 }
                 break;
             }
-//            case 3: {
-//                break;
-//            }
-//            case 4: {
-//                break;
-//            }
-            default:
-                mv = new ModelAndView("altaVotante");
+
             case 1: {
                 operaciones.bajaVotante(OVotante, sessionBuilder);
                 setSuccessView("bajaVotante");
                 mv = new ModelAndView(getSuccessView());
                 break;
             }
-            //case 2: {modificar(persona);accion = "Modificado";break;}
-            //case 3: {persona=buscar(persona);accion = "Consultado";break;}
-            //case 4: {listado=listar();accion = "Listado";break;}
+            default:
+                mv = new ModelAndView("redirect:index.htm");
         }
 
         return mv;

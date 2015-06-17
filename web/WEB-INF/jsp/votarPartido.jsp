@@ -20,7 +20,10 @@
             <form action="" method="POST">
                 <h1>Elige partido</h1>
                 <spring:bind path="nombre">
-                    <input type="text" name="${status.expression}" value="${status.value}">
+                    <input type="radio" name="${status.expression}" value="pp"><img src="../images/pp.jpg" width="50" height="50" alt="pp"><br>
+                    <input type="radio" name="${status.expression}" value="psoe"><img src="../images/psoe.jpg" width="50" height="50" alt="psoe"><br>
+                    <input type="radio" name="${status.expression}" value="ciutadans"><img src="../images/ciutadans.jpg" width="50" height="50" alt="ciudadanos"><br>
+                    <input type="radio" name="${status.expression}" value="upd"><img src="../images/upd.jpg" width="50" height="50" alt="upd"><br><br>
                 </spring:bind>
                 <input type="Submit" value="Votar" name="votar">
             </form>

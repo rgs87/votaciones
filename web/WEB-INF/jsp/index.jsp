@@ -7,11 +7,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../css/estilos.css" rel="stylesheet"  type="text/css"/>
+        <style type="text/css"><%@ include file="../resources/css/estilos.css" %> </style>
         <title>Votaciones</title>
     </head>
     <body>
-        <div id="titulo">Votaciones</div>
-        <a href="gestionVotaciones.htm">Gestion Votaciones</a>
+        <div id="titulo">Aplicación de gestión de votaciones</div>
+        <a href="gestionVotaciones.htm">Gestionar votación</a>
     </body>
 </html>

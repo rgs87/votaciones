@@ -10,6 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css"><%@ include file="../resources/css/estilos.css" %> </style>
         <title>JSP Page</title>
     </head>
     <body>

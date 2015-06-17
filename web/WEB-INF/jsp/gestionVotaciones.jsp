@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css"><%@ include file="../resources/css/estilos.css" %> </style>
         <title>Votaciones</title>
     </head>
     <body>
@@ -20,7 +21,7 @@
                         <td>DNI</td>
                         <td>
                             <spring:bind path="nif">
-                                <input type="text" name="${status.expression}" value="${status.value}" size="9" maxlength="9">
+                                <input type="text" name="${status.expression}" value="${status.value}" size="15" maxlength="9">
                             </spring:bind>
                         </td>
                     </tr>
@@ -28,13 +29,13 @@
                         <td>Clave</td>
                         <td>
                             <spring:bind path="password">
-                                <input type="password" name="${status.expression}" value="${status.value}" size="9" >
+                                <input type="password" name="${status.expression}" value="${status.value}" size="15" >
                             </spring:bind>
                         </td>
                     </tr>
 
                 </table>
-                <br><br>
+                <br>
                 <input type="submit" value="Alta Votante"  name="insertar">
                 <input type="submit" value="Baja Votante" name="baja" >
                 <input type="submit" value="Votar" name="votar">
